@@ -13994,12 +13994,15 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100000</span>
-<span class="n">list_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100000</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Python list</span>
+
+<span class="n">list_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1_000_000</span>
+<span class="n">list_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1_000_000</span>
 <span class="n">list_results</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_a</span><span class="p">)):</span>
     <span class="n">list_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">list_a</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">+</span> <span class="n">list_b</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
 <span class="c1"># print(list_results)</span>
 </pre></div>
 
@@ -14014,8 +14017,10 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">100000</span><span class="p">)</span>
-<span class="n">np_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span><span class="o">*</span><span class="mi">100000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Numpy</span>
+
+<span class="n">np_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1_000_000</span><span class="p">)</span>
+<span class="n">np_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1_000_000</span><span class="p">)</span>
 
 <span class="n">np_results</span> <span class="o">=</span> <span class="n">np_a</span> <span class="o">+</span> <span class="n">np_b</span>
 <span class="c1"># print(np_results)</span>
@@ -15291,7 +15296,7 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
@@ -15305,7 +15310,51 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_reshape</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">z_reshape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_reshape</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_reshape</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">z_reshape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_reshape</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
      </div>
@@ -15471,6 +15520,34 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_1</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_1</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_1_trans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">z_1</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="n">z_1_trans</span>
 </pre></div>
@@ -15521,6 +15598,48 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
 </pre></div>
 
@@ -15551,6 +15670,34 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">4.4</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mf">6.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">6.6</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mf">4.4</span><span class="p">]])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yy</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
      </div>
@@ -15719,7 +15866,8 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">)</span>
+<span class="n">big_array</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
      </div>
@@ -15857,7 +16005,7 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Compare-between-built-in-python-min()-max()-and-np.min(),-np.max()">Compare between built-in python <code>min() max()</code> and <code>np.min(), np.max()</code><a class="anchor-link" href="#Compare-between-built-in-python-min()-max()-and-np.min(),-np.max()">¶</a></h3>
+<h3 id="Compare-between-built-in-python-min(),-max()-and-np.min(),-np.max()">Compare between built-in python <code>min(), max()</code> and <code>np.min(), np.max()</code><a class="anchor-link" href="#Compare-between-built-in-python-min(),-max()-and-np.min(),-np.max()">¶</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -15937,6 +16085,20 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
@@ -15980,6 +16142,48 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16110,7 +16314,7 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16149,7 +16353,7 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Use-ogical-functions-as-mask">Use ogical functions as mask<a class="anchor-link" href="#Use-ogical-functions-as-mask">¶</a></h3>
+<h3 id="Use-logical-functions-as-mask">Use logical functions as mask<a class="anchor-link" href="#Use-logical-functions-as-mask">¶</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -16196,22 +16400,16 @@ Compare with Python <code>list</code>, NumPy is FAST and MEMORY EFFIENCY!!! (com
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="8.-Homework">8. Homework<a class="anchor-link" href="#8.-Homework">¶</a></h2><h4 id="8.1.-Exercise-1:-Write-a-NumPy-program-to-convert-a-list-of-numeric-value-into-a-one-dimensional-NumPy-array.">8.1. Exercise 1: Write a NumPy program to convert a list of numeric value into a one-dimensional NumPy array.<a class="anchor-link" href="#8.1.-Exercise-1:-Write-a-NumPy-program-to-convert-a-list-of-numeric-value-into-a-one-dimensional-NumPy-array.">¶</a></h4><h4 id="8.2.-Exercise-2:-Write-a-NumPy-program-to-create-a-3x3-matrix-with-values-ranging-from-2-to-10.">8.2. Exercise 2: Write a NumPy program to create a 3x3 matrix with values ranging from 2 to 10.<a class="anchor-link" href="#8.2.-Exercise-2:-Write-a-NumPy-program-to-create-a-3x3-matrix-with-values-ranging-from-2-to-10.">¶</a></h4><h4 id="8.3.-Exercise-3:-Write-a-NumPy-program-to-reverse-an-array-(first-element-becomes-last).">8.3. Exercise 3: Write a NumPy program to reverse an array (first element becomes last).<a class="anchor-link" href="#8.3.-Exercise-3:-Write-a-NumPy-program-to-reverse-an-array-(first-element-becomes-last).">¶</a></h4><h4 id="8.4.-Exercise-4:-Write-a-NumPy-program-to-convert-an-array-to-a-float-type">8.4. Exercise 4: Write a NumPy program to convert an array to a float type<a class="anchor-link" href="#8.4.-Exercise-4:-Write-a-NumPy-program-to-convert-an-array-to-a-float-type">¶</a></h4><h4 id="8.5.-Exercise-5:-Write-a-NumPy-program-to-create-a-2d-array-with-1-on-the-border-and-0-inside.">8.5. Exercise 5: Write a NumPy program to create a 2d array with 1 on the border and 0 inside.<a class="anchor-link" href="#8.5.-Exercise-5:-Write-a-NumPy-program-to-create-a-2d-array-with-1-on-the-border-and-0-inside.">¶</a></h4><h4 id="8.6.-Exercise-6:-Write-a-NumPy-program-to-create-a-8x8-matrix-and-fill-it-with-a-checkerboard-pattern.">8.6. Exercise 6: Write a NumPy program to create a 8x8 matrix and fill it with a checkerboard pattern.<a class="anchor-link" href="#8.6.-Exercise-6:-Write-a-NumPy-program-to-create-a-8x8-matrix-and-fill-it-with-a-checkerboard-pattern.">¶</a></h4><h4 id="8.7.-Exercise-7:-Write-a-NumPy-program-to-convert-the-values-of-Centigrade-degrees-into-Fahrenheit-degrees.-Centigrade-values-are-stored-into-a-NumPy-array.">8.7. Exercise 7: Write a NumPy program to convert the values of Centigrade degrees into Fahrenheit degrees. Centigrade values are stored into a NumPy array.<a class="anchor-link" href="#8.7.-Exercise-7:-Write-a-NumPy-program-to-convert-the-values-of-Centigrade-degrees-into-Fahrenheit-degrees.-Centigrade-values-are-stored-into-a-NumPy-array.">¶</a></h4><h4 id="8.8.-Exercise-8:-Write-a-NumPy-program-to-get-the-indices-of-the-sorted-elements-of-a-given-array.">8.8. Exercise 8: Write a NumPy program to get the indices of the sorted elements of a given array.<a class="anchor-link" href="#8.8.-Exercise-8:-Write-a-NumPy-program-to-get-the-indices-of-the-sorted-elements-of-a-given-array.">¶</a></h4>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<h2 id="8.-Homework">8. Homework<a class="anchor-link" href="#8.-Homework">¶</a></h2><h3 id="8.1.-Exercise-1:">8.1. Exercise 1:<a class="anchor-link" href="#8.1.-Exercise-1:">¶</a></h3><p>Write a NumPy program to convert a list of numeric value into a one-dimensional NumPy array.</p>
+<h3 id="8.2.-Exercise-2:">8.2. Exercise 2:<a class="anchor-link" href="#8.2.-Exercise-2:">¶</a></h3><p>Write a NumPy program to create a 3x3 matrix with values ranging from 2 to 10.</p>
+<h3 id="8.3.-Exercise-3:">8.3. Exercise 3:<a class="anchor-link" href="#8.3.-Exercise-3:">¶</a></h3><p>Write a NumPy program to reverse an array (first element becomes last).</p>
+<h3 id="8.4.-Exercise-4:">8.4. Exercise 4:<a class="anchor-link" href="#8.4.-Exercise-4:">¶</a></h3><p>Write a NumPy program to convert an array to a float type.</p>
+<h3 id="8.5.-Exercise-5:">8.5. Exercise 5:<a class="anchor-link" href="#8.5.-Exercise-5:">¶</a></h3><p>Write a NumPy program to create a 2d array with 1 on the border and 0 inside.</p>
+<h3 id="8.6.-Exercise-6:">8.6. Exercise 6:<a class="anchor-link" href="#8.6.-Exercise-6:">¶</a></h3><p>Write a NumPy program to create a 8x8 matrix and fill it with a checkerboard pattern.</p>
+<h3 id="8.7.-Exercise-7:">8.7. Exercise 7:<a class="anchor-link" href="#8.7.-Exercise-7:">¶</a></h3><p>Write a NumPy program to convert the values of Centigrade degrees into Fahrenheit degrees. Centigrade values are stored into a NumPy array.</p>
+<h3 id="8.8.-Exercise-8:">8.8. Exercise 8:<a class="anchor-link" href="#8.8.-Exercise-8:">¶</a></h3><p>Write a NumPy program to get the indices of the sorted elements of a given array.</p>
 
-     </div>
 </div>
-</div>
-</div>
-
 </div>
 </body>
 
