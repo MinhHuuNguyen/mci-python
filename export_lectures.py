@@ -31,4 +31,5 @@ if __name__ == '__main__':
     PYTHON_PATH = 'python/'
     HTML_PATH = 'html/'
 
+    os.system(f'rm -rf {PYTHON_PATH}/.ipynb_checkpoints/')
     export(PYTHON_PATH, HTML_PATH, args.lesson)
