@@ -1,4 +1,11 @@
+# Ignore files
 .ipynb_checkpoints
-data
 .DS_Store
+
+# Ignore extension
+*.zip
+
+# Ignore folder
 __pycache__
+data
+skills_test/Names
