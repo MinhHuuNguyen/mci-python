@@ -3,33 +3,44 @@ import os
 import argparse
 
 
-def export(python_path, html_path, lesson):
-    lectures = sorted(os.listdir(python_path))
-
-    for lecture in lectures:
-        if not lecture.endswith('.ipynb'):
-            continue
-        
-        if lesson != -1 and not lecture.startswith(f'{lesson}'):
-            continue
-
+def export_single_file(python_path, html_path, lecture=None):
+    if lecture is not None:
         nb_path = os.path.join(python_path, lecture)
-        os.system(f'jupyter nbconvert --to html_embed {nb_path}')
-
         html_name = lecture.split('.')[0]
-        from_path = os.path.join(python_path, f'{html_name}.html')
-        to_path = os.path.join(html_path, f'{html_name}.html')
-        os.system(f'mv {from_path} {to_path}')
+    else:
+        nb_path = python_path
+        python_path = '/'.join(python_path.split('/')[:-1])
+        html_name = nb_path.split('.')[0].split('/')[-1]
+
+    os.system(f'jupyter nbconvert --to html_embed {nb_path}')
+
+    from_path = os.path.join(python_path, f'{html_name}.html')
+    to_path = os.path.join(html_path, f'{html_name}.html')
+    os.system(f'mv {from_path} {to_path}')
+
+
+def export(python_path, html_path):
+    if os.path.isdir(python_path):
+        os.system(f'rm -rf {args.input}/.ipynb_checkpoints/')
+        lectures = sorted(os.listdir(python_path))
+
+        for lecture in lectures:
+            if not lecture.endswith('.ipynb'):
+                continue
+
+            export_single_file(python_path, html_path, lecture)
+
+    elif os.path.isfile(python_path):
+        export_single_file(python_path, html_path)
+
+    else:
+        raise f'Invalid input {python_path}'
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Start inference')
-    parser.add_argument(
-        '--lesson', type=int, default=-1, help='Lesson number')
+    parser.add_argument('--input', type=str, help='Input ipynb path to export')
+    parser.add_argument('--output', type=str, help='Output html path to export')
     args = parser.parse_args()
 
-    PYTHON_PATH = 'python/'
-    HTML_PATH = 'html/'
-
-    os.system(f'rm -rf {PYTHON_PATH}/.ipynb_checkpoints/')
-    export(PYTHON_PATH, HTML_PATH, args.lesson)
+    export(args.input, args.output)
