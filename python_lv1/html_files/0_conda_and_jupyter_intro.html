@@ -14270,9 +14270,13 @@ a.anchor-link {
 <h2 id="1.-Anaconda-introduction">1. Anaconda introduction<a class="anchor-link" href="#1.-Anaconda-introduction">¶</a></h2><h3 id="1.1.-Download-and-install-anaconda">1.1. Download and install anaconda<a class="anchor-link" href="#1.1.-Download-and-install-anaconda">¶</a></h3><p>Install Anaconda on Windows: <a href="https://docs.anaconda.com/anaconda/install/windows/">https://docs.anaconda.com/anaconda/install/windows/</a>
 <br>
 Install Anaconda on MacOS: <a href="https://docs.anaconda.com/anaconda/install/mac-os/">https://docs.anaconda.com/anaconda/install/mac-os/</a></p>
-<h3 id="1.2.-Interact-with-anaconda-environment">1.2. Interact with anaconda environment<a class="anchor-link" href="#1.2.-Interact-with-anaconda-environment">¶</a></h3><h4 id="Introduce-to-anaconda-environment">Introduce to anaconda environment<a class="anchor-link" href="#Introduce-to-anaconda-environment">¶</a></h4><p>An anaconda environment is a directory that contains a specific collection of conda packages that you have installed. The environment is separated and independent to each other. <br>
-Anaconda environments manage and run multiple python version on single computer. <br>
-Anaconda manage and run lots of packages in different environments and reduce conflicts between them.</p>
+<h3 id="1.2.-Interact-with-anaconda-environment">1.2. Interact with anaconda environment<a class="anchor-link" href="#1.2.-Interact-with-anaconda-environment">¶</a></h3><p>Conda cheat sheet is available <a href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">here</a>.</p>
+<h4 id="Introduce-to-anaconda-environment">Introduce to anaconda environment<a class="anchor-link" href="#Introduce-to-anaconda-environment">¶</a></h4><ul>
+<li>An anaconda environment is a directory that contains a specific collection of conda packages that you have installed.</li>
+<li>The environment is separated and independent to each other.</li>
+<li>Anaconda environments manage and run multiple python version on single computer.</li>
+<li>Anaconda manage and run lots of packages in different environments and reduce conflicts between them.</li>
+</ul>
 <h4 id="Check-environment-info">Check environment info<a class="anchor-link" href="#Check-environment-info">¶</a></h4><p>Run <code>conda info --envs</code> or <code>conda env list</code> to list environments which have installed.</p>
 <h4 id="Create-anaconda-environment">Create anaconda environment<a class="anchor-link" href="#Create-anaconda-environment">¶</a></h4><p>Run <code>conda create -n &lt;ENV_NAME&gt; python=&lt;PYTHON_VERSION&gt; -y</code> to create new environment with specific python version. <br>
 Example: <code>conda create -n mci_env python=3.8 -y</code>. <br>
@@ -14280,11 +14284,34 @@ It can take time to create environment.</p>
 <h4 id="Activate-an-environment">Activate an environment<a class="anchor-link" href="#Activate-an-environment">¶</a></h4><p>Run <code>conda activate &lt;ENV_NAME&gt;</code> to activate the environment. <br>
 Example: <code>conda activate mci_env</code>. <br>
 After activating an environment, the running environment change from <code>base</code> to <code>mci_env</code> and we can check the python version by running <code>python --version</code> or <code>python -V</code>.</p>
+<h4 id="Install-packages-to-an-environment">Install packages to an environment<a class="anchor-link" href="#Install-packages-to-an-environment">¶</a></h4><p>The simple way is to run <code>conda install &lt;PACKAGE_NAME&gt; -y</code> <br><br>
+We can specify the <code>channel</code> - where to locate and download the <code>packages</code>. Different <code>channel</code> can lead to different package version. <br>
+To specify the <code>channel</code>, run <code>conda install -c &lt;CHANNEL_NAME&gt; &lt;PACKAGE_NAME&gt; -y</code>. <br>
+Some popular anaconda channels:</p>
+<ul>
+<li><code>main</code>: the default channel built by Anaconda, Inc</li>
+<li><code>anaconda</code>: the mirror channel of <code>main</code> hosted in anaconda.org</li>
+<li><code>conda-forge</code>: the community channel <br></li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>Installing <code>numpy</code>: <code>conda install -c anaconda numpy -y</code></li>
+<li>Installing <code>pandas</code>: <code>conda install -c anaconda pandas -y</code></li>
+<li>Installing <code>matplotlib</code>: <code>conda install -c conda-forge matplotlib -y</code> <br><br></li>
+</ul>
+<p>We can specify the <code>version of package</code> that we want to install by running <code>conda install -c &lt;CHANNEL_NAME&gt; &lt;PACKAGE_NAME&gt;=&lt;VERSION&gt; -y</code><br>
+Example:</p>
+<ul>
+<li>Installing <code>numpy</code> version 1.21.2: <code>conda install -c anaconda numpy=1.21.2 -y</code></li>
+<li>Installing <code>pandas</code> version 1.3.4: <code>conda install -c anaconda pandas=1.3.4 -y</code></li>
+<li>Installing <code>matplotlib</code> version 3.5.0: <code>conda install -c conda-forge matplotlib=3.5.0 -y</code></li>
+</ul>
+<h4 id="Remove-package-from-an-environment">Remove package from an environment<a class="anchor-link" href="#Remove-package-from-an-environment">¶</a></h4><p>Run <code>conda remove &lt;PACKAGE_NAME&gt;</code> to remove package from an environment.</p>
+<h4 id="List-packages-installed-in-an-environment">List packages installed in an environment<a class="anchor-link" href="#List-packages-installed-in-an-environment">¶</a></h4><p>Run <code>conda list</code> to list all packages installed in an environment.</p>
 <h4 id="Deactivate-an-environment">Deactivate an environment<a class="anchor-link" href="#Deactivate-an-environment">¶</a></h4><p>Run <code>conda deactivate</code> to deactivate the running environment and change back to <code>base</code>.</p>
 <h4 id="Remove-an-environment">Remove an environment<a class="anchor-link" href="#Remove-an-environment">¶</a></h4><p>Run <code>conda env remove --name &lt;ENV_NAME&gt;</code> to remove the environment. <br>
 Example: <code>conda env remove --name mci_env</code>. <br>
 After removing the environments, we can check <code>conda env list</code>.</p>
-<h3 id="1.3.-Install-packages-to-anaconda-environment">1.3. Install packages to anaconda environment<a class="anchor-link" href="#1.3.-Install-packages-to-anaconda-environment">¶</a></h3><h4 id="List-packages-installed-in-an-environment">List packages installed in an environment<a class="anchor-link" href="#List-packages-installed-in-an-environment">¶</a></h4><p>Run <code>conda list</code> to list all packages installed in an environment. <br></p>
 
 </div>
 </div>
@@ -14293,10 +14320,16 @@ After removing the environments, we can check <code>conda env list</code>.</p>
 <h2 id="2.-Jupyter-notebook-introduction">2. Jupyter notebook introduction<a class="anchor-link" href="#2.-Jupyter-notebook-introduction">¶</a></h2><h3 id="2.1.-Get-started-with-jupyter-notebook">2.1. Get started with jupyter notebook<a class="anchor-link" href="#2.1.-Get-started-with-jupyter-notebook">¶</a></h3><p>To use jupyter notebook, please following these steps:</p>
 <ul>
 <li>Step 1: Activate conda environment</li>
-<li>Step 2: Install jupyter notebook by running <code>conda install jupyter notebook</code></li>
+<li>Step 2: Install jupyter notebook by running <code>conda install -c anaconda jupyter</code></li>
 <li>Step 3: Create a folder which contains document of MCI Python level 1</li>
 <li>Step 4: Run <code>jupyter notebook --notebook-dir=&lt;PATH_TO_FOLDER_FROM_STEP_3&gt;</code> to use jupyter notebook or run <code>jupyter lab --notebook-dir=&lt;PATH_TO_FOLDER_FROM_STEP_3&gt;</code> to use jupyter lab.</li>
 <li>Step 5: jupyter notebook or jupyter lab will be opened in browser with address <code>http://localhost:8888/</code></li>
+</ul>
+<p>We can run conda command (or any other commands) in jupyter notebook by using <code>!</code>.
+Example:</p>
+<ul>
+<li>List packages installed in an environment: <code>!conda list</code></li>
+<li>Install <code>numpy</code>: <code>!conda install -c anaconda numpy -y</code></li>
 </ul>
 <h3 id="2.2.-Shortcuts-in-jupyter-notebook">2.2. Shortcuts in jupyter notebook<a class="anchor-link" href="#2.2.-Shortcuts-in-jupyter-notebook">¶</a></h3><ul>
 <li><code>ESC</code> + <code>A</code>: Add a new cell above.</li>
