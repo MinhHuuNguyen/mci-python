@@ -10,12 +10,20 @@ by running this command <br>
 ```
 gdrive download 1R83MNlUShY55i3CzlXpMAMcxnEg4Hruw
 ```
-or download from this [link](https://drive.google.com/open?id=1R83MNlUShY55i3CzlXpMAMcxnEg4Hruw&authuser=20152464%40student.hust.edu.vn&usp=drive_fs)
+or download from this [link](https://drive.google.com/file/d/1R83MNlUShY55i3CzlXpMAMcxnEg4Hruw/view?usp=sharing)
+### Step 2: Download the `credit scoring data`
+by running this command <br>
+```
+gdrive download 1Am5zRIh0Yg2JMWJ4ADhZqGZWss08WOdr
+```
+or download from this [link](https://drive.google.com/file/d/1Am5zRIh0Yg2JMWJ4ADhZqGZWss08WOdr/view?usp=sharing)
 ### Step 2: Create folder, move file and unzip
 ``` bash
 mkdir data
 mv predict_future_sales.zip data
+mv credit_scoring.zip data
 unzip data/predict_future_sales.zip -d data
+unzip data/credit_scoring.zip -d data
 rm -rf data/__MACOSX
 ```
 
@@ -27,7 +35,7 @@ The test requirements are available [here](https://github.com/MinhHuuNguyen/mci-
 ```
 gdrive download 1AlgPZuIKSf8iU6bI4TqO3-MwjNBKMmTv
 ```
-or download from this [link](https://drive.google.com/open?id=1AlgPZuIKSf8iU6bI4TqO3-MwjNBKMmTv&authuser=20152464%40student.hust.edu.vn&usp=drive_fs)
+or download from this [link](https://drive.google.com/file/d/1AlgPZuIKSf8iU6bI4TqO3-MwjNBKMmTv/view?usp=sharing)
 ### Step 2: Create folder, move file and unzip
 ``` bash
 mv Names.zip skills_test
