@@ -1,0 +1,1 @@
+python export_lectures.py --input deep_learning/lectures --output deep_learning/html_files

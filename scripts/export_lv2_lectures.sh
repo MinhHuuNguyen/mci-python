@@ -1,0 +1,1 @@
+python export_lectures.py --input python_lv2/lectures --output python_lv2/html_files
