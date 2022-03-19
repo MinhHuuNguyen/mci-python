@@ -14300,13 +14300,14 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="3.-Simple-plots">3. Simple plots<a class="anchor-link" href="#3.-Simple-plots">¶</a></h2><h3 id="3.1.-Line-plot">3.1. Line plot<a class="anchor-link" href="#3.1.-Line-plot">¶</a></h3><h4 id="Show-single-line-plot-and-multiple-line-plots">Show single line plot and multiple line plots<a class="anchor-link" href="#Show-single-line-plot-and-multiple-line-plots">¶</a></h4>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">x</span>
 </pre></div>
 
      </div>
@@ -14314,14 +14315,46 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([-5.        , -4.79591837, -4.59183673, -4.3877551 , -4.18367347,
+       -3.97959184, -3.7755102 , -3.57142857, -3.36734694, -3.16326531,
+       -2.95918367, -2.75510204, -2.55102041, -2.34693878, -2.14285714,
+       -1.93877551, -1.73469388, -1.53061224, -1.32653061, -1.12244898,
+       -0.91836735, -0.71428571, -0.51020408, -0.30612245, -0.10204082,
+        0.10204082,  0.30612245,  0.51020408,  0.71428571,  0.91836735,
+        1.12244898,  1.32653061,  1.53061224,  1.73469388,  1.93877551,
+        2.14285714,  2.34693878,  2.55102041,  2.75510204,  2.95918367,
+        3.16326531,  3.36734694,  3.57142857,  3.7755102 ,  3.97959184,
+        4.18367347,  4.3877551 ,  4.59183673,  4.79591837,  5.        ])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># single line plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="c1"># plt.plot(x, y)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -14356,7 +14389,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># multiple line plots in multiple lines of code</span>
@@ -14396,11 +14429,11 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># multiple lines plot in single line of code</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="c1"># plt.plot(x1, y1, x2, y2)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -14660,7 +14693,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using `markerfacecolor`</span>
@@ -14701,7 +14734,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using `mfc`</span>
@@ -14748,7 +14781,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using `color`</span>
@@ -14791,7 +14824,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using `c`</span>
@@ -14839,7 +14872,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using `linestyle`</span>
@@ -14888,7 +14921,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using `ls`</span>
@@ -14903,6 +14936,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">'--'</span><span class="p">)</span> <span class="c1"># dashed</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">6</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">'-.'</span><span class="p">)</span> <span class="c1"># dashdot</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">7</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">':'</span><span class="p">)</span>  <span class="c1"># dotted</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14914,20 +14948,6 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fd3f5efb970&gt;]</pre>
-</div>
-
-</div>
 
 <div class="jp-OutputArea-child">
 
@@ -14955,7 +14975,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using `linewidth`</span>
@@ -14996,7 +15016,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using `lw`</span>
@@ -15043,7 +15063,7 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'-g'</span><span class="p">)</span>    <span class="c1"># [no marker][solid][green]</span>
@@ -16978,12 +16998,12 @@ Matplotlib is the whole package. And it contains 2 modules: <code>pylab</code> a
 <li>We use the daily historical sales data from previous lecture in this homework. (Use this <a href="https://drive.google.com/file/d/1R83MNlUShY55i3CzlXpMAMcxnEg4Hruw/view">link</a> to download this dataset)</li>
 <li>All figures must have title, label and legend.</li>
 </ul>
-<h3 id="7.1.-Exercise-1:">7.1. Exercise 1:<a class="anchor-link" href="#7.1.-Exercise-1:">¶</a></h3><p>Randomly choose 3 shops, use <code>one line plot figure</code> to show the total turnover of them each month over 33 months (from January 2013 is 0, February 2013 is 1,..., October 2015 is 33.)</p>
-<h3 id="7.2.-Exercise-2:">7.2. Exercise 2:<a class="anchor-link" href="#7.2.-Exercise-2:">¶</a></h3><p>Randomly choose 1 item, use <code>one combo figure with bar plot and line plot</code> to show the sales and the turnover of it over 33 months (from January 2013 is 0, February 2013 is 1,..., October 2015 is 33.)</p>
+<h3 id="7.1.-Exercise-1:">7.1. Exercise 1:<a class="anchor-link" href="#7.1.-Exercise-1:">¶</a></h3><p>Randomly choose 3 shops, use <code>one line plot figure</code> to show the total turnover of them each month over 34 months (from January 2013 is 0, February 2013 is 1,..., October 2015 is 33.)</p>
+<h3 id="7.2.-Exercise-2:">7.2. Exercise 2:<a class="anchor-link" href="#7.2.-Exercise-2:">¶</a></h3><p>Randomly choose 1 item, use <code>one combo figure with bar plot and line plot</code> to show the sales and the turnover of it over 34 months (from January 2013 is 0, February 2013 is 1,..., October 2015 is 33.)</p>
 <h3 id="7.3.-Exercise-3:">7.3. Exercise 3:<a class="anchor-link" href="#7.3.-Exercise-3:">¶</a></h3><p>Randomly choose 3 items, use <code>one bar plot figure</code> to show the sales of them in 3 years 2013, 2014, and 2015.</p>
-<h3 id="7.4.-Exercise-4:">7.4. Exercise 4:<a class="anchor-link" href="#7.4.-Exercise-4:">¶</a></h3><p>Randomly choose 1 shop, use <code>stack plot figure</code> to show the contribution of turnover of each item each month over 33 months (from January 2013 is 0, February 2013 is 1,..., October 2015 is 33.)</p>
+<h3 id="7.4.-Exercise-4:">7.4. Exercise 4:<a class="anchor-link" href="#7.4.-Exercise-4:">¶</a></h3><p>Randomly choose 1 shop, use <code>stack plot figure</code> to show the contribution of turnover of each item each month over 34 months (from January 2013 is 0, February 2013 is 1,..., October 2015 is 33.)</p>
 <h3 id="7.5.-Exercise-5:">7.5. Exercise 5:<a class="anchor-link" href="#7.5.-Exercise-5:">¶</a></h3><p>Randomly choose 1 shop, use <code>pie plot figure</code> to show the contribution of turnover (in percent) of each item in 3 years 2013, 2014, and 2015. (1 pie plot figure for each year, use <code>subplots</code> to put all 3 figures together)</p>
-<h3 id="7.6.-Exercise-6:">7.6. Exercise 6:<a class="anchor-link" href="#7.6.-Exercise-6:">¶</a></h3><p>Randomly choose 1 item, use <code>histogram figure</code> to show the distribution of sales of the item over 33 months (from January 2013 is 0, February 2013 is 1,..., October 2015 is 33.)</p>
+<h3 id="7.6.-Exercise-6:">7.6. Exercise 6:<a class="anchor-link" href="#7.6.-Exercise-6:">¶</a></h3><p>Randomly choose 1 item, use <code>histogram figure</code> to show the distribution of sales of the item over 34 months (from January 2013 is 0, February 2013 is 1,..., October 2015 is 33.)</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
