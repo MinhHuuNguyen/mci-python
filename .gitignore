@@ -11,6 +11,4 @@ data
 skills_test/Names
 hw
 homework
-deep_learning/lectures/dl_example
-deep_learning/lectures/cv_example
-deep_learning/lectures/nlp_example
+deep_learning/lectures/*_example
