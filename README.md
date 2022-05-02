@@ -1,3 +1,4 @@
+# README OUT OF DATE
 # MCI PYTHON LEVEL 1
 ## Run this command to export lectures, practices and solutions
 ``` bash
