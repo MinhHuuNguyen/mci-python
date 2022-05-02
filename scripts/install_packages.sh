@@ -7,6 +7,7 @@ conda install -c conda-forge matplotlib -y
 conda install -c anaconda seaborn -y
 conda install -c anaconda scikit-learn -y
 conda install -c conda-forge tensorflow -y
+conda install -c anaconda tensorflow-gpu -y
 conda install -c conda-forge keras -y
 conda install -c conda-forge jupyter_nbextensions_configurator -y
 conda install -c conda-forge jupyter_contrib_nbextensions -y
