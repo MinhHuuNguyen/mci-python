@@ -13,6 +13,7 @@ conda install -c conda-forge jupyter_nbextensions_configurator -y
 conda install -c conda-forge jupyter_contrib_nbextensions -y
 conda install -c conda-forge autopep8 -y
 conda install -c conda-forge librosa -y
+conda install -c conda-forge yfinance -y
 conda install -c anaconda nltk -y
 python -c "import nltk; nltk.download('stopwords')"
 
