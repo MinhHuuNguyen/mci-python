@@ -14793,7 +14793,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ex_6_array</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,::</span><span class="mi">2</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ex_6_array[1::2,::2]</span>
 <span class="c1"># row: [1::2]: start index = 1, stop index = end, step = 2 =&gt; 1, 3, 5, 7</span>
 <span class="c1"># col: [::2]: start index = 0, stop index = end, step = 2 =&gt; 0, 2, 4, 6</span>
 </pre></div>
@@ -14809,7 +14809,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ex_6_array</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ex_6_array[::2,1::2]</span>
 <span class="c1"># row: [::2]: start index = 0, stop index = end, step = 2 =&gt; 0, 2, 4, 6</span>
 <span class="c1"># col: [1::2]: start index = 1, stop index = end, step = 2 =&gt; 1, 3, 5, 7</span>
 </pre></div>
@@ -14992,9 +14992,9 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>B1: Sort numpy array
-1, 3, 6, 2, 10, 5, 8 =&gt; 1, 2, 3, 5, 6, 8, 10
-B2: Get indices
+<p>Step 1: Sort numpy array <br>
+1, 3, 6, 2, 10, 5, 8 =&gt; 1, 2, 3, 5, 6, 8, 10 <br>
+Step 2: Get indices <br>
 1, 2, 3, 5, 6, 8, 10 =&gt; 0, 3, 1, 5, 2, 6, 4</p>
 
 </div>
