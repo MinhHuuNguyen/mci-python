@@ -29,7 +29,7 @@ function process_data {
 process_data \
     "deep_learning/data" \
     "1PJBmSE54fhe1_WDU_kTB3tIf7GDEPHIW 1PBirGT9ytlTJsnNnAGlT0xEpAzLX3N7K 1PNMkytuhg8ZSvQFdInzFPRIW9PF8EXL5 1PLbB47FucyIwE9n8LjNrypqlerhEo7jZ" \
-    "covid19_tweets_dataset.zip dog_cat_dataset.zip house_prices_dataset.zip speech_emotion_dataset.zip "
+    "covid19_tweets_dataset.zip dog_cat_dataset.zip house_prices_dataset.zip speech_emotion_dataset.zip"
 
 # Download data for python level 1 course
 # If this code does not work, you can download the datasets from these links below
